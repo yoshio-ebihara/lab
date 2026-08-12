@@ -34,30 +34,8 @@
 </head>
 
 <body>
-<header class="hd_bg">
-	<div class="hd w_base">
-		<h1 class="hd_logo"><a href="index.html">
-			<img src="images/logoE.png" alt="logo">
-			<div class="hd_ttl"><span>京都大学 大学院工学研究科 電気電子デジタル理工学専攻</span>蛯原研究室</div>
-		</a></h1>
-		<nav>
-			<ul class="nav_list">
-				<li><a href="index.html">ホーム</a></li>
-				<li><a href="member.html">メンバー</a>
-					<ul class="sub-menu">
-						<li><a href="member.html#list01">教員・職員</a></li>
-						<li><a href="member.html#list02">学生</a></li>
-					</ul>
-				</li>
-				<li><a href="research.html">研究</a></li>
-				<li><a href="paper.html">論文</a></li>
-				<li><a href="material.html">資料等</a></li>
-				<li><a href="en/project/index.html" target="_blank">ASPIRE-CPDS</a></li>
-				<li><a href="en/index.html">ENGLISH</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
+<!-- hd start-->
+<div id="header"></div>
 <!-- hd end-->
 
 <div class="con_bg">
@@ -126,5 +104,12 @@ $(document).ready(function(){
 <link rel="stylesheet" href="plugin/lightbox/css/lightbox.css" media="screen"/>
 <script src="plugin/lightbox/js/lightbox.js"></script> 
 <!--lightbox end-->
+
+   <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#header").innerHTML = data);
+    </script>
+
 </body>
 </html>
