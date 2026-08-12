@@ -66,19 +66,8 @@
 </div>
 <!-- con_bg end-->
 
-<footer class="ft_bg">
-	<div class="ft w_base">
-		<div class="ft_ttl">
-			<h1>京都大学 蛯原研究室</h1>
-			<p>
-			〒615-8510<br>
-			京都市西京区京都大学桂<br>
-			<!--TEL:092-XXX-XXXX-->
-			</p>
-		</div>
-		<p class="ft_copy">Copyright © 京都大学 蛯原研究室 All Rights Reserved.</p>
-	</div>
-</footer>
+<!-- ft start-->
+<div id="footer"></div>
 <!-- ft end-->
 	
 <div class="sp_nav_trigger"> <span></span> <span></span> <span></span> </div>
@@ -118,6 +107,9 @@ $(document).ready(function(){
       fetch("header.html")
         .then((response) => response.text())
         .then((data) => document.querySelector("#header").innerHTML = data);
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#footer").innerHTML = data);
     </script>
 
 </body>
